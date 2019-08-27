@@ -1,0 +1,7 @@
+<h1 style="text-align:center;">Axtwo Playlist</h1>
+<h3 style="text-align:center;"> All Genres</h3>
+
+<% @genres.each do |genre| %>
+  <% @genre = Genre.find_by_name(genre.name) %>
+<ol style="text-align:center;"> <a href="/genres/<%=@genre.slug%>"> <%= @genre.name %></a></ol>
+<% end %>
